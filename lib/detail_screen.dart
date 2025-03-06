@@ -9,6 +9,16 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        elevation: 4,
+        title: Text(place.name, style: const TextStyle(color: Colors.white)),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.tealAccent, size: 28),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -20,8 +30,8 @@ class DetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) => Container(
                   height: 250,
-                  color: Colors.grey[300],
-                  child: const Center(child: Icon(Icons.image_not_supported)),
+                  color: Colors.grey[700],
+                  child: const Center(child: Icon(Icons.image_not_supported, color: Colors.white)),
                 ),
               ),
               Container(
@@ -33,6 +43,7 @@ class DetailScreen extends StatelessWidget {
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Nunito',
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -43,20 +54,20 @@ class DetailScreen extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
-                        const Icon(Icons.calendar_today),
-                        Text(place.openDays),
+                        const Icon(Icons.calendar_today, color: Colors.tealAccent),
+                        Text(place.openDays, style: const TextStyle(color: Colors.white)),
                       ],
                     ),
                     Column(
                       children: <Widget>[
-                        const Icon(Icons.access_time),
-                        Text(place.openHours),
+                        const Icon(Icons.access_time, color: Colors.tealAccent),
+                        Text(place.openHours, style: const TextStyle(color: Colors.white)),
                       ],
                     ),
                     Column(
                       children: <Widget>[
-                        const Icon(Icons.attach_money),
-                        Text(place.ticketPrice),
+                        const Icon(Icons.attach_money, color: Colors.tealAccent),
+                        Text(place.ticketPrice, style: const TextStyle(color: Colors.white)),
                       ],
                     ),
                   ],
@@ -67,7 +78,7 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   place.description,
                   textAlign: TextAlign.justify,
-                  style: const TextStyle(fontSize: 16.0),
+                  style: const TextStyle(fontSize: 16.0, color: Colors.white70),
                 ),
               ),
               SizedBox(
@@ -97,8 +108,8 @@ class DetailScreen extends StatelessWidget {
             width: 250,
             errorBuilder: (context, error, stackTrace) => Container(
               width: 150,
-              color: Colors.grey[300],
-              child: const Center(child: Icon(Icons.image_not_supported)),
+              color: Colors.grey[700],
+              child: const Center(child: Icon(Icons.image_not_supported, color: Colors.white)),
             ),
           ),
         ),

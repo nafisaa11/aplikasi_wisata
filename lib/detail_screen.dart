@@ -42,21 +42,21 @@ class DetailScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Column(
-                      children: const <Widget>[
-                        Icon(Icons.calendar_today),
-                        Text('Open Everyday'),
+                      children: <Widget>[
+                        const Icon(Icons.calendar_today),
+                        Text(place.openDays),
                       ],
                     ),
                     Column(
-                      children: const <Widget>[
-                        Icon(Icons.access_time),
-                        Text('09:00 - 17:00'),
+                      children: <Widget>[
+                        const Icon(Icons.access_time),
+                        Text(place.openHours),
                       ],
                     ),
                     Column(
-                      children: const <Widget>[
-                        Icon(Icons.attach_money),
-                        Text('Rp 500.000'),
+                      children: <Widget>[
+                        const Icon(Icons.attach_money),
+                        Text(place.ticketPrice),
                       ],
                     ),
                   ],

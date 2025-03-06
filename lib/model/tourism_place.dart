@@ -4,6 +4,9 @@ class TourismPlace {
   String imageAsset;
   String description;
   List<String> imageUrls;
+  String openDays;
+  String openHours;
+  String ticketPrice;
 
   TourismPlace({
     required this.name,
@@ -11,6 +14,9 @@ class TourismPlace {
     required this.imageAsset,
     required this.description,
     required this.imageUrls,
+    required this.openDays,
+    required this.openHours,
+    required this.ticketPrice,
   });
 }
 
@@ -26,6 +32,9 @@ var TourismPlaceList = [
       'assets/images/diving.jpg',
       'assets/images/air_terjun.jpg',
     ],
+    openDays: 'Setiap hari',
+    openHours: '06:00 - 18:00',
+    ticketPrice: 'Rp 500.000/orang',
   ),
   TourismPlace(
     name: 'Candi Borobudur',
@@ -37,6 +46,9 @@ var TourismPlaceList = [
       'assets/images/borobudur2.jpg',
       'assets/images/borobudur3.jpg',
     ],
+    openDays: 'Senin - Minggu',
+    openHours: '07:00 - 17:00',
+    ticketPrice: 'Rp 50.000/orang',
   ),
   TourismPlace(
     name: 'Gunung Bromo',
@@ -48,6 +60,9 @@ var TourismPlaceList = [
       'assets/images/bromo2.jpg',
       'assets/images/bromo3.jpg',
     ],
+    openDays: 'Setiap hari',
+    openHours: '24 jam',
+    ticketPrice: 'Rp 220.000/orang',
   ),
   TourismPlace(
     name: 'Danau Toba',
@@ -59,6 +74,9 @@ var TourismPlaceList = [
       'assets/images/danau_toba2.jpg',
       'assets/images/danau_toba3.jpg',
     ],
+    openDays: 'Setiap hari',
+    openHours: '06:00 - 18:00',
+    ticketPrice: 'Gratis',
   ),
   TourismPlace(
     name: 'Pulau Komodo',
@@ -69,6 +87,9 @@ var TourismPlaceList = [
       'assets/images/komodo1.jpg',
       'assets/images/komodo2.jpg',
     ],
+    openDays: 'Senin - Minggu',
+    openHours: '07:00 - 17:00',
+    ticketPrice: 'Rp 150.000/orang',
   ),
   TourismPlace(
     name: 'Gili Trawangan',
@@ -80,6 +101,9 @@ var TourismPlaceList = [
       'assets/images/lombok2.jpg',
       'assets/images/lombok3.jpg',
     ],
+    openDays: 'Setiap hari',
+    openHours: '24 jam',
+    ticketPrice: 'Gratis',
   ),
   TourismPlace(
     name: 'Tugu Monas',
@@ -90,6 +114,9 @@ var TourismPlaceList = [
       'assets/images/monas1.jpg',
       'assets/images/monas2.jpg',
     ],
+    openDays: 'Selasa - Minggu',
+    openHours: '08:00 - 22:00',
+    ticketPrice: 'Rp 20.000/orang',
   ),
   TourismPlace(
     name: 'Tanah Lot',
@@ -100,5 +127,8 @@ var TourismPlaceList = [
       'assets/images/tanah_lot1.jpg',
       'assets/images/tanah_lot2.jpg',
     ],
+    openDays: 'Senin - Minggu',
+    openHours: '06:00 - 19:00',
+    ticketPrice: 'Rp 60.000/orang',
   ),
 ];

@@ -29,7 +29,7 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   place.name,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Nunito',
@@ -64,22 +64,17 @@ class DetailScreen extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(22.0),
-                child:  Text(
+                child: Text(
                   place.description,
                   textAlign: TextAlign.justify,
-                  style: TextStyle(fontSize: 16.0),
+                  style: const TextStyle(fontSize: 16.0),
                 ),
               ),
               SizedBox(
                 height: 150,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    _buildImageItem('assets/images/air_terjun.jpg'),
-                    _buildImageItem('assets/images/diving.jpg'),
-                    _buildImageItem('assets/images/ikan.jpg'),
-                    _buildImageItem('assets/images/kapal.jpg'),
-                  ],
+                  children: place.imageUrls.map((image) => _buildImageItem(image)).toList(),
                 ),
               ),
             ],
@@ -95,7 +90,7 @@ class DetailScreen extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(12.0), // Menambahkan border radius
+          borderRadius: BorderRadius.circular(12.0),
           child: Image.asset(
             imagePath,
             fit: BoxFit.cover,

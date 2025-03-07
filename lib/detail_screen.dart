@@ -1,5 +1,5 @@
-import 'package:appm2/model/tourism_place.dart';
 import 'package:flutter/material.dart';
+import 'package:appm2/model/tourism_place.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({Key? key, required this.place}) : super(key: key);
@@ -9,13 +9,16 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey[200], 
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.teal[700], 
         elevation: 4,
-        title: Text(place.name, style: const TextStyle(color: Colors.white)),
+        title: Text(
+          place.name,
+          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.tealAccent, size: 28),
+          icon: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -30,8 +33,8 @@ class DetailScreen extends StatelessWidget {
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) => Container(
                   height: 250,
-                  color: Colors.grey[700],
-                  child: const Center(child: Icon(Icons.image_not_supported, color: Colors.white)),
+                  color: Colors.grey[400],
+                  child: const Center(child: Icon(Icons.image_not_supported, color: Colors.black54)),
                 ),
               ),
               Container(
@@ -43,7 +46,7 @@ class DetailScreen extends StatelessWidget {
                     fontSize: 30.0,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Nunito',
-                    color: Colors.white,
+                    color: Colors.teal, 
                   ),
                 ),
               ),
@@ -54,20 +57,20 @@ class DetailScreen extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
-                        const Icon(Icons.calendar_today, color: Colors.tealAccent),
-                        Text(place.openDays, style: const TextStyle(color: Colors.white)),
+                        const Icon(Icons.calendar_today, color: Colors.teal),
+                        Text(place.openDays, style: TextStyle(color: Colors.grey[800])),
                       ],
                     ),
                     Column(
                       children: <Widget>[
-                        const Icon(Icons.access_time, color: Colors.tealAccent),
-                        Text(place.openHours, style: const TextStyle(color: Colors.white)),
+                        const Icon(Icons.access_time, color: Colors.teal),
+                        Text(place.openHours, style: TextStyle(color: Colors.grey[800])),
                       ],
                     ),
                     Column(
                       children: <Widget>[
-                        const Icon(Icons.attach_money, color: Colors.tealAccent),
-                        Text(place.ticketPrice, style: const TextStyle(color: Colors.white)),
+                        const Icon(Icons.attach_money, color: Colors.teal),
+                        Text(place.ticketPrice, style: TextStyle(color: Colors.grey[800])),
                       ],
                     ),
                   ],
@@ -78,7 +81,7 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   place.description,
                   textAlign: TextAlign.justify,
-                  style: const TextStyle(fontSize: 16.0, color: Colors.white70),
+                  style: const TextStyle(fontSize: 16.0, color: Colors.black87),
                 ),
               ),
               SizedBox(
@@ -108,8 +111,8 @@ class DetailScreen extends StatelessWidget {
             width: 250,
             errorBuilder: (context, error, stackTrace) => Container(
               width: 150,
-              color: Colors.grey[700],
-              child: const Center(child: Icon(Icons.image_not_supported, color: Colors.white)),
+              color: Colors.grey[400],
+              child: const Center(child: Icon(Icons.image_not_supported, color: Colors.black54)),
             ),
           ),
         ),

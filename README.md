@@ -1,1 +1,1 @@
-Aplikasi flutter statis sederhana tentang wisata yang berada di indonesia
+ExploreNusantara adalah aplikasi Flutter sederhana yang menampilkan informasi destinasi wisata yang ada di Indonesia. Aplikasi ini bersifat statis, seluruh data destinasi sudah disimpan secara lokal tanpa koneksi ke server atau API eksternal.
